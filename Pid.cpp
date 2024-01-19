@@ -1,7 +1,7 @@
 #include "Arduino.h"
 #include <Pid.h>
 
-Pid::Pid(double cycle_time_ms, double kp, double ki, double kd, double taud, double limit_min, double limit_max) {
+Pid::Pid(double cycle_time_ms, double kp, double ki, double kd, double taud_ms, double limit_min, double limit_max) {
     this->cycle_time = cycle_time_ms/1000;
     this->limit_min = limit_min;
     this->limit_max = limit_max;
@@ -15,7 +15,7 @@ void Pid::setGains(double kp, double ki, double kd, double taud) {
     this->kp = kp;
     this->ki = ki;
     this->kd = kd;
-    this->taud = taud/1000;
+    this->taud = taud_ms/1000;
 }
 
 void Pid::resetController() {

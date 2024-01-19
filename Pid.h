@@ -36,8 +36,6 @@ class Pid {
         double prev_integral_action;
         double prev_derivative_action;
         
-
-
         double limit_min;
         double limit_max;
 };
