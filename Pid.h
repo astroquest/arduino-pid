@@ -6,6 +6,7 @@ class Pid {
         Pid(double, double, double, double, double, double, double);
 
         void setGains(double, double, double, double);
+        void resetController();
 
         double getAction(double, double);
 
@@ -15,22 +16,27 @@ class Pid {
         double taud;
 
     private:
+        void setCoefficients();
+
         double getIntegralAction(double);
         double getDerivativeAction(double);
-        double checkSaturation(double, double, double);
+        double checkSaturation(double);
 
         double cycle_time;
 
-        double process_output;
-        double error;
-        double integral_action;
-        double derivative_action;
+        double b_int;
+        double a_der;
+        double b_der;
+
         double action;
+        double saturated_action;
 
         double prev_process_output;
         double prev_error;
         double prev_integral_action;
         double prev_derivative_action;
+        
+
 
         double limit_min;
         double limit_max;
