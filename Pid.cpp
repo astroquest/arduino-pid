@@ -6,12 +6,12 @@ Pid::Pid(double cycle_time_ms, double kp, double ki, double kd, double taud_ms, 
     this->limit_min = limit_min;
     this->limit_max = limit_max;
 
-    setGains(kp, ki, kd, taud);
+    setGains(kp, ki, kd, taud_ms);
     setCoefficients();
     resetController();
 }
 
-void Pid::setGains(double kp, double ki, double kd, double taud) {
+void Pid::setGains(double kp, double ki, double kd, double taud_ms) {
     this->kp = kp;
     this->ki = ki;
     this->kd = kd;
