@@ -1,0 +1,6 @@
+Pid KEYWORD1
+setGains KEYWORD2
+getAction   KEYWORD2
+getIntegralAction   KEYWORD2
+getDerivativeAction KEYWORD2
+checkSaturation KEYWORD2
