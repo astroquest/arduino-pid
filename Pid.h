@@ -6,6 +6,7 @@ class Pid {
         Pid(double, double, double, double, double, double, double);
 
         void setGains(double, double, double, double);
+        void setLimits(double, double);
         void resetController();
 
         double getAction(double, double);

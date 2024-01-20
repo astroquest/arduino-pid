@@ -1,5 +1,6 @@
 Pid KEYWORD1
 setGains KEYWORD2
+setLimits KEYWORD2
 resetController KEYWORD2
 setCoefficients KEYWORD2
 getAction   KEYWORD2
